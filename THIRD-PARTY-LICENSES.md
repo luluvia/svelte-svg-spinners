@@ -1,4 +1,6 @@
-Copyright (c) Luis Luvia
+SVG Spinners (CSS & SMIL): https://github.com/n3r4zzurr0/svg-spinners
+
+Copyright (c) Utkarsh Verma
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

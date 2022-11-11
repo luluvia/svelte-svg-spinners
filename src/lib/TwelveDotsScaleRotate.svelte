@@ -11,14 +11,14 @@
 </script>
 
 <svg
-	width="{width}"
-	height="{height}"
-	class="{$$props.class}"
-	fill="{color}"
-	viewBox="{viewBox}"
-	aria-busy="{ariaBusy}"
-	aria-hidden="{ariaHidden}"
-	aria-live="{ariaLive}"
+	width={width}
+	height={height}
+	class={$$props.class}
+	fill={color}
+	viewBox={viewBox}
+	aria-busy={ariaBusy}
+	aria-hidden={ariaHidden}
+	aria-live={ariaLive}
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<g>

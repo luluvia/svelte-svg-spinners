@@ -1,0 +1,1 @@
+export { default as TwelveDotsScaleRotate } from './TwelveDotsScaleRotate.svelte'

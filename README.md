@@ -1,47 +1,709 @@
-# Svelte + TS + Vite
+# Svelte SVG Spinners
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+A collection of [SVG Spinners](https://github.com/n3r4zzurr0/svg-spinners) components for Svelte.
 
-## Recommended IDE Setup
+## Installation
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
-
-## Need an official Svelte framework?
-
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
-
-## Technical considerations
-
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```sh
+npm install svelte-svg-spinners
 ```
+
+## Usage
+
+```js
+<script>
+  import { Pulse } from 'svelte-svg-spinners'
+</script>
+
+<Pulse />
+```
+
+## API
+
+### `<SpinnerComponent />`
+
+### Options
+
+| Property   | Options   | Description                                                                                                         |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| size       | _number_  | Specifies the size of the spinner                                                                                   |
+| width      | _number_  | Specifies the width of the spinner                                                                                  |
+| height     | _number_  | Specifies the height of the spinner                                                                                 |
+| color      | _string_  | Color of the spinner                                                                                                |
+| dur        | _string_  | Duration of spinner animation                                                                                       |
+| ariaBusy   | _boolean_ | Set [aria-busy](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute     |
+| ariaHidden | _boolean_ | Set [aria-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute |
+| ariaLive   | _string_  | Set [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute     |
+
+## Preview
+
+<table>
+  <tr>
+    <th>Preview</th>
+    <th>Component Name</th>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/12-dots-scale-rotate.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/12-dots-scale-rotate-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/12-dots-scale-rotate-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>TwelveDotsScaleRotate</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/180-ring-with-bg.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/180-ring-with-bg-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/180-ring-with-bg-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>OneEightyWithBg</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/180-ring.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/180-ring-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/180-ring-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>OneEightyRing</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/270-ring-with-bg.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/270-ring-with-bg-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/270-ring-with-bg-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>TwoSeventyWithBg</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/270-ring.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/270-ring-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/270-ring-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>TwoSeventyRing</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-bounce.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-bounce-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-bounce-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsBounce</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-fade.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-fade-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-fade-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsFade</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-moving.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-moving-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-moving-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsMoving</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-rotate.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-rotate-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-rotate-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsRotate</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-scale-middle.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-scale-middle-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-scale-middle-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsScaleMiddle</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/3-dots-scale.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-scale-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/3-dots-scale-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>ThreeDotsScale</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/6-dots-rotate.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-rotate-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-rotate-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>SixDotsRotate</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/6-dots-scale-middle.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-scale-middle-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-scale-middle-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>SixDotsScaleMiddle</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/6-dots-scale.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-scale-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/6-dots-scale-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>SixDotsScale</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/90-ring-with-bg.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/90-ring-with-bg-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/90-ring-with-bg-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>NinetyRingWithBg</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/90-ring.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/90-ring-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/90-ring-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>NinetyRing</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bars-fade.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-fade-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-fade-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BarsFade</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bars-rotate-fade.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-rotate-fade-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-rotate-fade-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BarsRotateFade</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bars-scale-fade.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-fade-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-fade-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BarsScaleFade</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bars-scale-middle.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-middle-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-middle-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BarsScaleMiddle</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bars-scale.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bars-scale-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BarsScale</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/blocks-scale.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-scale-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-scale-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BlockScale</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/blocks-shuffle-2.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-shuffle-2-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-shuffle-2-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BlocksShuffleTwo</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/blocks-shuffle-3.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-shuffle-3-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-shuffle-3-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BlockShuffleThree</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/blocks-wave.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-wave-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/blocks-wave-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BlocksWave</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/bouncing-ball.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bouncing-ball-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/bouncing-ball-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>BouncingBall</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/clock.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/clock-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/clock-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>Clock</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/dot-revolve.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/dot-revolve-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/dot-revolve-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>DotRevolve</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/eclipse-half.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/eclipse-half-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/eclipse-half-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>EclipeHalf</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/eclipse.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/eclipse-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/eclipse-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>Eclipse</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/gooey-balls-1.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/gooey-balls-1-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/gooey-balls-1-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>GoeeyBallsOne</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/gooey-balls-2.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/gooey-balls-2-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/gooey-balls-2-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>GooeyBallsTwo</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-2.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-2-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-2-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseTwo</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-3.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-3-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-3-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseThree</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-multiple.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-multiple-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-multiple-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseMultiple</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-ring.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-ring-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-ring-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseRing</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-rings-2.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-2-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-2-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseRingsTwo</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-rings-3.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-3-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-3-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseRingsThree</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse-rings-multiple.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-multiple-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-rings-multiple-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>PulseRingsMultiple</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/pulse.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/pulse-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>Pulse</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/tadpole.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/tadpole-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/tadpole-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>Tadpole</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/wifi-fade.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wifi-fade-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wifi-fade-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>WifiFade</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/wifi.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wifi-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wifi-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>Wifi</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg/wind-toy.svg"
+        ><picture
+          ><source
+            media="(prefers-color-scheme: dark)"
+            srcset="
+              https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wind-toy-white-36.svg
+            " />
+          <img
+            src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/wind-toy-black-36.svg" /></picture
+      ></a>
+    </td>
+    <td>WindToy</td>
+  </tr>
+</table>
+
+## License
+
+[MIT](https://github.com/luluvia/svelte-svg-spinners/blob/main/LICENSE.md) (c) 2022 Luis Luvia

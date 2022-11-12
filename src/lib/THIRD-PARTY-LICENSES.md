@@ -19,9 +19,10 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-----------
+---
 
-stringDurationToFloat and modified SVG code from React SVG Spinners: https://github.com/dephraiim/react-svg-spinners
+stringDurationToFloat, modified SVG code and README base from
+React SVG Spinners: https://github.com/dephraiim/react-svg-spinners
 
 Copyright (c) Ephraim Atta-Duncan
 

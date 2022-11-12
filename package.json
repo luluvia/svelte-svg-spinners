@@ -1,7 +1,8 @@
 {
 	"name": "svelte-svg-spinners",
 	"author": "Luis Luvia <lluvia@lusade.net>",
-	"version": "0.0.0",
+	"repostiory": "https://github.com/luluvia/svelte-svg-spinners",
+	"version": "0.1.0",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {

@@ -13,11 +13,11 @@
 </script>
 
 <svg
-	width={width}
-	height={height}
+	{width}
+	{height}
 	class={$$props.class}
 	fill={color}
-	viewBox={viewBox}
+	{viewBox}
 	aria-busy={ariaBusy}
 	aria-hidden={ariaHidden}
 	aria-live={ariaLive}

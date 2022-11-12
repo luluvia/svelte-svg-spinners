@@ -1,13 +1,13 @@
 <script lang="ts">
-	export let size = 24;
-	export let width = size;
-	export let height = size;
-	export let color = "currentColor";
-	export let dur = "0.6s";
-	export let viewBox = "0 0 24 24";
-	export let ariaBusy = false;
-	export let ariaHidden = false;
-	export let ariaLive: "off" | "polite" | "assertive" = "off";
+	export let size = 24
+	export let width = size
+	export let height = size
+	export let color = 'currentColor'
+	export let dur = '0.6s'
+	export let viewBox = '0 0 24 24'
+	export let ariaBusy = false
+	export let ariaHidden = false
+	export let ariaLive: 'off' | 'polite' | 'assertive' = 'off'
 </script>
 
 <svg

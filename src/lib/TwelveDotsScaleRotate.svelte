@@ -11,11 +11,11 @@
 </script>
 
 <svg
-	width={width}
-	height={height}
+	{width}
+	{height}
 	class={$$props.class}
 	fill={color}
-	viewBox={viewBox}
+	{viewBox}
 	aria-busy={ariaBusy}
 	aria-hidden={ariaHidden}
 	aria-live={ariaLive}
@@ -28,7 +28,7 @@
 				begin="0;spinner_tKsu.end-0.5s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -39,7 +39,7 @@
 				begin="spinner_7Z73.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -50,7 +50,7 @@
 				begin="spinner_9Qlc.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -61,7 +61,7 @@
 				begin="spinner_Wd87.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -72,7 +72,7 @@
 				begin="spinner_Khxv.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -83,7 +83,7 @@
 				begin="spinner_lMMO.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -94,7 +94,7 @@
 				begin="spinner_ld6P.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -105,7 +105,7 @@
 				begin="spinner_5L9t.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -116,7 +116,7 @@
 				begin="spinner_XyBs.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -127,7 +127,7 @@
 				begin="spinner_BfTD.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -138,7 +138,7 @@
 				begin="spinner_HiSl.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>
@@ -149,7 +149,7 @@
 				begin="spinner_7gAK.begin+0.1s"
 				attributeName="r"
 				calcMode="spline"
-				dur={dur}
+				{dur}
 				values="1;2;1"
 				keySplines=".27,.42,.37,.99;.53,0,.61,.73"
 			/>

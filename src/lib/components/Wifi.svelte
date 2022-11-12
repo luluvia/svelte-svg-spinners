@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { stringDurationToFloat } from './utils'
+	import { stringDurationToFloat } from '../utils'
 
 	const FACTOR = 0.25 / 0.001
 

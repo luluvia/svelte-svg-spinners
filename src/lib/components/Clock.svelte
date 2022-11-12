@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { stringDurationToFloat } from './utils'
+	import { stringDurationToFloat } from '../utils'
 
 	export let size = 24
 	export let width = size

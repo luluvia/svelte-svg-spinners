@@ -59,6 +59,14 @@
 			values="20;20.5;20"
 			keySplines=".33,0,.66,.33;.33,.66,.66,1"
 		/>
-		<animate id="r" begin="b.end" attributeName="cy" calcMode="spline" {dur} values="20;5" keySplines=".33,.66,.66,1" />
+		<animate
+			id="r"
+			begin="b.end"
+			attributeName="cy"
+			calcMode="spline"
+			{dur}
+			values="20;5"
+			keySplines=".33,.66,.66,1"
+		/>
 	</ellipse>
 </svg>

@@ -5,9 +5,7 @@
 	export let color = 'currentColor'
 	export let dur = '0.6s'
 	export let viewBox = '0 0 24 24'
-	export let ariaBusy = false
 	export let ariaHidden = false
-	export let ariaLive: 'off' | 'polite' | 'assertive' = 'off'
 </script>
 
 <svg
@@ -16,9 +14,7 @@
 	class={$$props.class}
 	fill={color}
 	{viewBox}
-	aria-busy={ariaBusy}
 	aria-hidden={ariaHidden}
-	aria-live={ariaLive}
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<rect x="1" y="1" rx="1" width="10" height="10">

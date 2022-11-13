@@ -31,9 +31,7 @@ npm install svelte-svg-spinners
 | height     | _number_  | Specifies the height of the spinner                                                                                 |
 | color      | _string_  | Color of the spinner                                                                                                |
 | dur        | _string_  | Duration of spinner animation                                                                                       |
-| ariaBusy   | _boolean_ | Set [aria-busy](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute     |
 | ariaHidden | _boolean_ | Set [aria-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute |
-| ariaLive   | _string_  | Set [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute     |
 
 ## Preview
 

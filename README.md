@@ -29,6 +29,7 @@ npm install svelte-svg-spinners
 | size       | _number_  | Specifies the size of the spinner                                                                                   |
 | width      | _number_  | Specifies the width of the spinner                                                                                  |
 | height     | _number_  | Specifies the height of the spinner                                                                                 |
+| class      | _string_  | Specifies the classes of the spinner                                                                                |
 | color      | _string_  | Color of the spinner                                                                                                |
 | dur        | _string_  | Duration of spinner animation                                                                                       |
 | ariaHidden | _boolean_ | Set [aria-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute |

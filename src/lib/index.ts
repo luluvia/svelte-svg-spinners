@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 export { default as BarsFade } from './components/BarsFade.svelte'
 export { default as BarsRotateFade } from './components/BarsRotateFade.svelte'
 export { default as BarsScale } from './components/BarsScale.svelte'

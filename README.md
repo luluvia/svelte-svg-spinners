@@ -705,4 +705,4 @@ npm install svelte-svg-spinners
 
 ## License
 
-[MIT](https://github.com/luluvia/svelte-svg-spinners/blob/main/LICENSE.md) (c) 2022 Luis Luvia
+[MIT](https://github.com/luluvia/svelte-svg-spinners/blob/main/LICENSE.md) (c) 2024 Luis Luvia
